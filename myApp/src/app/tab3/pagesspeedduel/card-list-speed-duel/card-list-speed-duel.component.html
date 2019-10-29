@@ -1,0 +1,59 @@
+<ion-header>
+  <button mat-button color="warning" id="blockicon" [routerLink]="['']">
+    <ion-icon name="arrow-round-back"></ion-icon>
+</button>
+  <ion-toolbar>
+      <ion-title>
+          Mes Cartes
+      </ion-title>
+  </ion-toolbar>
+  <button (click)="displayFilterBlock()" id="blockicon">
+    <ion-icon name="more"></ion-icon>
+</button>
+</ion-header>
+<div id="totalCardIGetBlock">
+  <p>Total : </p>
+</div>
+<main>
+  <div id="blankBlock"></div>
+  <ion-fab edge slot="fixed">
+      <ion-searchbar animated placeholder="Nom d'une carte"></ion-searchbar>
+      <!--*(ionClear)="resetSearch()" (ionChange)="searchProduct($event)*"  -->
+  </ion-fab>
+
+  <ion-radio-group id="cardFilterBlock" allow-empty-selection *ngIf="showCardFilterBlock">
+      <ion-item>
+          <p>Monster</p>
+          <ion-radio (click)="displayFilterMonster()" style="width: 20px;margin: 5px;" slot="end" color="warning">
+          </ion-radio>
+      </ion-item>
+
+      <ion-item>
+          <p>Spell</p>
+          <ion-radio (click)="displayFilterSpell()" style="width: 20px;margin: 5px;" slot="end" color="success" onclick="onClickGetAllSpellCard">
+          </ion-radio>
+      </ion-item>
+
+      <ion-item>
+          <p>Trap</p>
+          <ion-radio (click)="displayFilterTrap()" style="width: 20px;margin: 5px;" slot="end" color="danger" name="sausage"></ion-radio>
+      </ion-item>
+  </ion-radio-group>
+
+  <div id="cardBy30Block">
+      <div class="cardBlock" *ngFor="let cardDescriptionSpeedDuel of cardDescriptionSpeedDuel">
+          <img [src]="cardDescriptionSpeedDuel.card_images[0].image_url" alt="" />
+      </div>
+  </div>
+
+  <div id="footer">
+      <button class="buttonPreviousNext" [disabled]="currentPage === 1" (click)="goToPreviousPage()">
+                    <ion-icon name="arrow-back"></ion-icon>
+                </button>
+
+
+      <button class="buttonPreviousNext" (click)="goToNextPage()">
+        <ion-icon name="arrow-forward"></ion-icon>
+    </button>
+  </div>
+</main>
