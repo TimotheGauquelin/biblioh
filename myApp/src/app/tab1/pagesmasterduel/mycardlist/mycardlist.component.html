@@ -1,0 +1,107 @@
+<ion-header>
+  <button mat-button color="warning" id="blockicon" [routerLink]="['']">
+      <ion-icon name="arrow-round-back"></ion-icon>
+  </button>
+  <ion-toolbar>
+      <ion-title>
+          Mes Cartes
+      </ion-title>
+  </ion-toolbar>
+  <button (click)="displayFilterBlock()" id="blockicon">
+      <ion-icon name="more"></ion-icon>
+  </button>
+</ion-header>
+<div id="totalCardIGetBlock">
+  <p>Total : </p>
+</div>
+<main>
+  <div id="blankBlock"></div>
+  <ion-searchbar (ionChange)="searchCard($event)" animated placeholder="Nom d'un carte"></ion-searchbar>
+  <!--*(ionClear)="resetSearch()" -->
+  <ion-radio-group id="cardFilterBlock" allow-empty-selection *ngIf="showCardFilterBlock">
+      <ion-item>
+          <p>Monstre</p>
+          <ion-radio (click)="displayFilterMonster()" style="width: 20px;margin: 5px;" slot="end" color="warning">
+          </ion-radio>
+      </ion-item>
+
+      <ion-item>
+          <p>Spell</p>
+          <ion-radio (click)="displayFilterSpell()" style="width: 20px;margin: 5px;" slot="end" color="success" onclick="onClickGetAllSpellCard">
+          </ion-radio>
+      </ion-item>
+
+      <ion-item>
+          <p>Trap</p>
+          <ion-radio (click)="displayFilterTrap()" style="width: 20px;margin: 5px;" slot="end" color="danger" name="sausage">
+          </ion-radio>
+      </ion-item>
+  </ion-radio-group>
+  <div id="monsterFilterBlock" *ngIf=showMonsterFilterBlock> fjfjfjfjfj</div>
+  <div id="spellFilterBlock" *ngIf=showSpellFilterBlock>
+      <ion-item id="radioBlock">
+          <img src="/assets/Normal-N.png">
+          <ion-radio style="width: 20px;margin: 5px;" slot="end">
+          </ion-radio>
+      </ion-item>
+
+      <ion-item id="radioBlock">
+          <img src="/assets/Equip.png">
+          <ion-radio style="width: 20px;margin: 5px;" slot="end">
+          </ion-radio>
+      </ion-item>
+
+      <ion-item id="radioBlock">
+          <img src="/assets/Ritual.png">
+          <ion-radio style="width: 20px;margin: 5px;" slot="end" color="danger" name="sausage"></ion-radio>
+      </ion-item>
+
+      <ion-item id="radioBlock">
+          <img src="/assets/Continuous.png">
+          <ion-radio style="width: 20px;margin: 5px;" slot="end" color="danger" name="sausage"></ion-radio>
+      </ion-item>
+
+      <ion-item id="radioBlock">
+          <img src="/assets/Quick-Play.png">
+          <ion-radio style="width: 20px;margin: 5px;" slot="end" color="danger" name="sausage"></ion-radio>
+      </ion-item>
+
+      <ion-item id="radioBlock">
+          <img src="/assets/Field.png">
+          <ion-radio style="width: 20px;margin: 5px;" slot="end" color="danger" name="sausage"></ion-radio>
+      </ion-item>
+  </div>
+  <div id="trapFilterBlock" *ngIf=showTrapFilterBlock>
+      <ion-item id="radioTrapBlock">
+          <img src="/assets/Normal-N.png">
+          <ion-radio style="width: 20px;margin: 5px;" slot="end" value="trap-1">
+          </ion-radio>
+      </ion-item>
+      <ion-item id="radioTrapBlock">
+          <img src="/assets/Continuous.png">
+          <ion-radio style="width: 20px;margin: 5px;" slot="end" value="trap-2">
+          </ion-radio>
+      </ion-item>
+      <ion-item id="radioTrapBlock">
+          <img src="/assets/Counter.png">
+          <ion-radio style="width: 20px;margin: 5px;" slot="end" value="trap">
+          </ion-radio>
+      </ion-item>
+  </div>
+  <div id="cardBy30Block">
+      <div class="cardBlock" [routerLink]="['/selectedCard']" *ngFor="let cardDescription of cardDescriptions">
+          <img [src]="cardDescription.card_images[0].image_url" alt="" />
+      </div>
+  </div>
+
+  <div id="footer">
+      <button class="buttonPreviousNext" [disabled]="currentPage === 1" (click)="goToPreviousPage()">
+          <ion-icon name="arrow-back"></ion-icon>
+      </button>
+
+
+      <button class="buttonPreviousNext" (click)="goToNextPage()">
+          <ion-icon name="arrow-forward"></ion-icon>
+      </button>
+  </div>
+</main>

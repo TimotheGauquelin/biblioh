@@ -1,0 +1,178 @@
+:host {
+    background-color: rgb(218, 218, 218);
+}
+
+// HEADER
+ion-header {
+    background-color: gold;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+}
+
+#blockicon {
+    height: 100%;
+    width: 56px;
+    //Flex//
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+ion-icon {
+    height: 35px;
+    width: 35px;
+    margin-left: 5px;
+    //Flex//
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+// MAIN
+main {
+    height: 100%;
+    width: 100%;
+    //Flex//
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow: scroll;
+}
+
+//Bloc nombre de carte
+#totalCardIGetBlock {
+    width: 100%;
+    height: 54px;
+    background: #c4c4c4;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+//Barre de recherche
+ion-searchbar {
+    margin: 0;
+}
+
+//Pop Filter A Carte
+#cardFilterBlock {
+    height: 50px;
+    width: 90%;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+//------ Pop Filter à Monstre
+#monsterFilterBlock {
+    height: 50px;
+    width: 90%;
+    background-color: rgb(116, 116, 116);
+    display: flex;
+    flex-direction: row;
+}
+
+//------ Pop Filter à Magie
+#spellFilterBlock {
+    height: 100px;
+    width: 90%;
+    background-color: rgb(116, 116, 116);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+//------ Pop Filter à Piège
+#trapFilterBlock {
+    height: 50px;
+    width: 90%;
+    background-color: rgb(116, 116, 116);
+    display: flex;
+    flex-direction: row;
+}
+
+#cardBy30Block {
+    height: 100%;
+    width: 100%;
+    margin: 2px;
+    //Flex//
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow: scroll;
+}
+
+p {
+    margin-left: 3%;
+}
+
+.cardBlock {
+    height: 100px;
+    width: 55px;
+    background-color: transparent;
+    margin-left: 2px;
+    margin-top: 2px;
+    //Flex//
+    display: flex;
+    flex-direction: column;
+}
+
+img {
+    height: 100px;
+    width: 68px;
+}
+
+////ATTENTION////
+#cardpopupheadbar {
+    height: 50px;
+    width: 100%;
+    background-color: gold;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#footer {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+}
+
+.buttonPreviousNext {
+    height: 40px;
+    width: 170px;
+    background-color: gold;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#radioBlock {
+    height: 49.9%;
+    width: 33.3%;
+    display: flex;
+    & img {
+        height: 20px;
+        width: 20px;
+    }
+}
+
+#radioTrapBlock {
+    height: 100%;
+    width: 33.3%;
+    display: flex;
+    & img {
+        height: 20px;
+        width: 20px;
+    }
+}
