@@ -1,0 +1,134 @@
+:host {
+    background-color: rgb(218, 218, 218);
+}
+
+ion-header {
+    background-color: gold;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+}
+
+.toolbar-container {
+    background-color: gold;
+}
+
+#blockicon {
+    height: 100%;
+    width: 56px;
+    //Flex//
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+ion-icon {
+    height: 35px;
+    width: 35px;
+    margin-left: 5px;
+    //Flex//
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+main {
+    height: 100%;
+    width: 100%;
+    margin-top: 20px;
+    //Flex//
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#addNewDeckButton {
+    width: 300px;
+    height: 70px;
+    background-color: gold;
+    box-shadow: 1px 2px 1px rgb(149, 149, 149);
+    border-radius: 10px;
+    margin-top: 20px;
+    //Flex//
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    //Police//
+    color: white;
+    font-size: 20px;
+}
+
+.createdDeckDiv {
+    width: 330px;
+    height: 140px;
+    background-color: gold;
+    box-shadow: 1px 2px 1px rgb(149, 149, 149);
+    border-radius: 5px;
+    //Flex//
+    display: flex;
+    flex-direction: row;
+    //Police//
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.createdDeckSubDivImage {
+    height: 100%;
+    width: 38%;
+    //Flex//
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.createdDeckSubDivImage img {
+    height: 120px;
+    width: 120px;
+    border: 3px solid white;
+}
+
+.createdDeckSubDivDesc {
+    height: 100%;
+    width: 58%;
+    //Flex//
+    display: flex;
+    flex-direction: column;
+}
+
+.createdDeckSubDivDescNameDeck {
+    height: 34%;
+    width: 100%;
+    /*       background-color: red; */
+    //Flex//
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.createdDeckSubDivDescDescDeck {
+    height: 33%;
+    width: 100%;
+    /*            background-color: green; */
+    //Flex//
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.createdDeckSubDivDescOtherDeck {
+    height: 33%;
+    width: 100%;
+    /*         background-color: pink; */
+    //Flex//
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
