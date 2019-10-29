@@ -2,3 +2,56 @@
   max-height: 35vh;
   overflow: hidden;
 }
+
+main {
+  height: 100%;
+  width: 100%;
+  background-color: rgb(218, 218, 218);
+  //Flex//
+  display: flex;
+  flex-direction: column;
+}
+
+#block_image {
+  height: 275px;
+  width: 100%;
+  background-color: rgb(218, 218, 218);
+  //Flex//
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+img {
+  height: 150px;
+  width: 150px;
+}
+
+#block_homeyellowcell {
+  height: 275px;
+  width: 100%;
+  background-color: rgb(218, 218, 218);
+  margin-bottom: 25px;
+  //Flex//
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.yellowcell {
+  height: 50px;
+  width: 320px;
+  background-color: gold;
+  border-radius: 3px;
+  box-shadow: 1px 1px 1px rgb(149, 149, 149);
+  //Flex//
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  //Police//
+  color: white;
+  font-size: 20px;
+}
