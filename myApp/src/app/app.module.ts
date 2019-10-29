@@ -13,6 +13,7 @@ import { MycardlistComponent } from './tab1/pagesmasterduel/mycardlist/mycardlis
 import { BanlistComponent } from './tab1/pagesmasterduel/banlist/banlist.component';
 import { SelectedcardComponent } from './tab1/pagesmasterduel/selectedcard/selectedcard.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CardListSpeedDuelComponent } from './tab3/pagesspeedduel/card-list-speed-duel/card-list-speed-duel.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HttpClientModule } from '@angular/common/http';
   DecklistComponent,
   MycardlistComponent,
   BanlistComponent,
-  SelectedcardComponent
+  SelectedcardComponent,
+  CardListSpeedDuelComponent,
 ],
   entryComponents: [],
   imports: [
