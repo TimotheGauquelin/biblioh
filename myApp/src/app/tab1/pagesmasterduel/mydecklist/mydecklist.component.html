@@ -1,0 +1,24 @@
+<ion-header>
+  <button mat-button color="warning" id="blockicon" [routerLink]="['']">
+          <ion-icon name="arrow-round-back" ></ion-icon>
+          </button>
+  <ion-toolbar>
+      <ion-title>
+          Mes Decks
+      </ion-title>
+  </ion-toolbar>
+</ion-header>
+<main>
+
+  <div class="createdDeckDiv">
+      <div class="createdDeckSubDivImage"><img src="/assets/icon/medium_sennenpuzzle.png"></div>
+      <div class="createdDeckSubDivDesc">
+          <div class="createdDeckSubDivDescNameDeck"> RED EYES DECK </div>
+          <div class="createdDeckSubDivDescDescDeck"> </div>
+          <div class="createdDeckSubDivDescOtherDeck"> </div>
+      </div>
+  </div>
+
+  <ion-button (click)="addNewDeck()" color="warning " id="addNewDeckButton">Créer un nouveau deck</ion-button>
+  <!-- (click)="createDeck() " -->
+</main>
